@@ -1,4 +1,5 @@
 import Button from '@material-ui/core/Button';
+import PropTypes from 'prop-types'
 
 
 const FeedbackOptions = ({options, onLeaveFeedback}) => {
@@ -13,3 +14,9 @@ const FeedbackOptions = ({options, onLeaveFeedback}) => {
 }
 
 export default FeedbackOptions;
+
+FeedbackOptions.propType = {
+    options: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),),
+  }
